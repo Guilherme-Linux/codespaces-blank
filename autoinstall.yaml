@@ -11,13 +11,13 @@ autoinstall:
         layout: br
     timezone: "America/Sao_Paulo"   
     packages:
-        - git
-        - wget
-	- htop
-   	- btop
-    	- curl
     	- git
-    	- flatpak
+	- wget
+	- htop
+ 	- btop
+	- curl
+	- git
+ 	- flatpak
     codecs:
         install: true
     drivers:
