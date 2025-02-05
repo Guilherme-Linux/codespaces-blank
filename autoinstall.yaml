@@ -18,6 +18,7 @@ autoinstall:
         - btop
         - wget
         -flatpak
+        -ubuntu-restricted-extras
     codecs:
         install: true
     drivers:
