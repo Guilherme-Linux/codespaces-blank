@@ -1,0 +1,43 @@
+#cloud-config
+
+autoinstall:
+  version: 1
+
+#USER's
+
+  identity:
+    realname: "Alex de Olivera Souza"
+    hostname: "buntu_PC"
+    username: "alex"
+    password: "$6$xF.mnrPjyMhfCu5t$Nqgh/16uhCL.jol/2IIIFtVMlz0C3HLr28waobUDw26/naLAgVJ0G5ZcZBkbc02z9k4uTKSl1T7zexeykTxeW1"
+    primary-group: sudo
+
+#STOREGE
+
+  storage:
+    layout:
+      name: zfs
+
+#PACKAGES
+  packages:
+    - htop
+    - curl
+    - git
+    - flatpak
+
+#LAST-COMMANDS:
+
+  last-commands:
+    - "apt update && apt upgrade && apt dist-update"
+    - "sudo add-apt-repository ppa:flatpak/stable"
+    - "sudo apt update"
+    - "sudo apt install flatpak"
+    - "sudo apt install gnome-software-plugin-flatpak"
+    - "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
+    - "chmod +x ./flat.sh"
+    - "./flat.sh"
+    - "sudo apt install ubuntu-desktop"
+    - "sudo apt-get install ubuntu-restricted-extras"
+    - "reboot"
+    - "flatpak update"
+    
