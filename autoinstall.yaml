@@ -1,27 +1,26 @@
 #cloud-config
 autoinstall:
- version: 1
- identity:
-  realname: 'Alex de Oliveira Souza'
-  hostname: ubuntu-px
-  username: alex
-  password: '$y$j9T$pwURDa/CTwScXwLa1Txp2/$xS7Ahkh8dec5qEAUWjfrXnUH75tg5XoV2KwGAeslGU3'
- locale: pt_BR.utf8
-  keyboard:
-   layout: br
-  timezone: "America/Sao_Paulo"   
- packages:
-  - git
-  - wget
-  - htop
-  - btop
-  - curl
-  - git
-  - flatpak
- codecs:
-  install: true
- drivers:
-  install: true
+    version: 1
+    identity:
+        realname: 'Alex de Oliveira Souza'
+        hostname: ubuntu-desktop
+        username: alex
+        password: '$y$j9T$bLI.TFbTpK75V5Z1Y3hB1/$fDMqdXOtC7Jby9y7qyG9ciJgmCkWwkUo90aiGAWj7aB'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - libreoffice
+        - gimp
+        - git
+        - htop
+        - btop
+        - wget
+        -flatpak
+    codecs:
+        install: true
+    drivers:
+        install: true
     updates: all
     shutdown: reboot
-        
