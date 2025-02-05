@@ -1,27 +1,28 @@
-#cloud-config
+---
 autoinstall:
-    version: 1
-    identity:
-        realname: 'Alex'
-        hostname: ubuntu-desktop
-        username: alex
-        password: '$y$j9T$WAkjWJcHJb4xDw9b4ql0D/$/nicuSz0x1jE3/z0k/ZfO7Bi0DMQhnL0oxeMP3.RWP8'
-    locale: pt_BR.utf8
-    keyboard:
-        layout: br
-    timezone: "America/Sao_Paulo"   
-    packages:
-        - libreoffice
-        - gimp
-        - git
-        - wget
-    snaps:
-        - name: spotify
-          channel: stable
-          classic: false
-    codecs:
-        install: true
-    drivers:
-        install: true
-    updates: all
-    shutdown: reboot
+  version: 1
+  identity:
+    realname: "Alex"
+    hostname: ubuntu-desktop
+    username: alex
+    password: |
+      $y$j9T$WAkjWJcHJb4xDw9b4ql0D/$/nicuSz0x1jE3/z0k/ZfO7Bi0DMQhn
+      L0oxeMP3.RWP8
+  locale: pt_BR.UTF-8
+  keyboard:
+    layout: br
+  timezone: America/Sao_Paulo
+  packages:
+    - libreoffice
+    - gimp
+    - git
+    - wget
+  snaps:
+    - name: spotify
+      channel: stable
+  codecs:
+    install: true
+  drivers:
+    install: true
+  updates: all
+  shutdown: reboot
