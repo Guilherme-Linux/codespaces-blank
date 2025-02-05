@@ -5,7 +5,7 @@ autoinstall:
         realname: 'Alex de Oliveira Souza'
         hostname: ubuntu-desktop
         username: alex
-        password: '$y$j9T$bLI.TFbTpK75V5Z1Y3hB1/$fDMqdXOtC7Jby9y7qyG9ciJgmCkWwkUo90aiGAWj7aB'
+        password: '$y$j9T$0Gtf.Niux8QnOLWR6OF0x0$hZF9qs7i28wwvArepmvp/0IG26OyhnR/s1wde6raFRB'
     locale: pt_BR.utf8
     keyboard:
         layout: br
