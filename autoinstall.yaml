@@ -13,10 +13,11 @@ autoinstall:
     layout: br
   timezone: America/Sao_Paulo
   packages:
-    - libreoffice
-    - gimp
+    - htop
+    - btop
+    - curl
     - git
-    - wget
+    - flatpak
   snaps:
     - name: spotify
       channel: stable
@@ -25,4 +26,14 @@ autoinstall:
   drivers:
     install: true
   updates: all
+  late-commands:
+    - "apt update && apt upgrade -y && apt dist-upgrade -y"
+    - "add-apt-repository -y ppa:flatpak/stable"
+    - "apt update"
+    - "apt install -y flatpak gnome-software-plugin-flatpak"
+    - "flatpak remote-add --if-not-exists flathub \
+      https://dl.flathub.org/repo/flathub.flatpakrepo"
+    - "apt install -y ubuntu-desktop"
+    - "apt install -y ubuntu-restricted-extras"
+    - "reboot"
   shutdown: reboot
